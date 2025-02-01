@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# QuizApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+QuizApp is an interactive quiz platform built using React. It allows users to test their knowledge by answering multiple-choice questions. The app includes a leaderboard, a real-time timer for each question, and a detailed summary of answers with additional reading materials.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Fetches quiz questions from an API.
+- Supports a timer mechanism for each question.
+- Tracks and updates the score dynamically.
+- Displays a leaderboard ranking players based on scores.
+- Provides detailed explanations and reading materials for each question.
+- Uses local storage to retain leaderboard data.
+- Plays sound effects for correct and wrong answers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Ensure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14 or later)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Feli-au/QuizWebApp.git
+   cd quiz-app
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+   or
+   ```sh
+   yarn install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the development server:
 
-### `npm run eject`
+```sh
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+OR
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This will start the application at `http://localhost:3000/`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### API Integration
 
-## Learn More
+The app fetches quiz questions from the following API endpoint:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+https://api.allorigins.win/raw?url=https://api.jsonserve.com/Uw5CrX
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ensure that the API is available before running the app.
 
-### Code Splitting
+### File Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+QuizApp/
+├── public/
+├── src/
+│   ├── sounds/        # Sound files for correct/wrong answers
+│   ├── App.js         # Main component
+│   ├── App.css        # Styling file
+│   ├── index.js       # Entry point
+├── package.json       # Dependencies and scripts
+├── README.md          # Project documentation
+```
 
-### Analyzing the Bundle Size
+### Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Modify `App.css` to change the appearance of the quiz.
+- Update API URL in `fetchQuizData` function inside `App.js` if a new data source is used.
 
-### Making a Progressive Web App
+### Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Quiz not loading?** Check API availability.
+- **No sound effects?** Ensure that correct.mp3 and wrong.mp3 are properly imported.
+- **Leaderboard not updating?** Try clearing local storage and reloading the page.
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Harshit Soni
